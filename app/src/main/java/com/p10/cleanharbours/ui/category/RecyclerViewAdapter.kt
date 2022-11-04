@@ -44,7 +44,7 @@ class RecyclerViewAdapter(recyclerDataArrayList: ArrayList<WasteCategory>, mcont
                 holder.title.text = "ORGANIC"
             }
             "donation" -> {
-                holder.imageView.setImageDrawable(mcontext.getDrawable(R.drawable.organic_waste))
+                holder.imageView.setImageDrawable(mcontext.getDrawable(R.drawable.donate))
                 holder.title.text = "DONATION"
             }
 

@@ -4,6 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".ui.schedules_pickups.ScheduledPickUpActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/scheduledPickUps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:spanCount="1"
+        tools:itemCount="4"
+        android:layout_margin="10dp"
+        tools:listitem="@layout/schedule_pickup_item" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,6 +21,7 @@ class CategoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCategoryBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.title = getString(R.string.select_category)
         supportActionBar?.setDisplayHomeAsUpEnabled(true);
         supportActionBar?.setHomeButtonEnabled(true);
         binding.categoriesList.layoutManager = GridLayoutManager(this, 2)

@@ -9,4 +9,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="black_transparency">#99000000</color>
+    <color name="red">#de095b</color>
+    <color name="confirmation_email">#ad6a53</color>
+    <color name="pick_up">#454241</color>
+    <color name="scheduled_item">#aec2b1</color>
 </resources>

@@ -19,4 +19,30 @@
     <string name="scheduled_pickup">Scheduled pickups</string>
     <string name="registration_title">Registration</string>
     <string name="profile">Profile</string>
+    <string name="prompt_first_name">First name</string>
+    <string name="prompt_last_name">Last name</string>
+    <string name="phone_number">Phone number</string>
+    <string name="email">Email</string>
+    <string name="expected_pick_up">Expected Pickup</string>
+    <string name="street">Street</string>
+    <string name="pincode">Pincode</string>
+    <string name="city">City</string>
+    <string name="other_info">Any other info</string>
+    <string-array name="cities">
+        <item>Bangalore</item>
+        <item>Chennai</item>
+        <item>Hyderabad</item>
+        <item>Coimbatore</item>
+        <item>Kochi</item>
+    </string-array>
+    <string name="schedule">Schedule</string>
+    <string name="go_back">Go back</string>
+    <string name="proceed">Proceed</string>
+    <string name="Lets_get_your_details">Lets get your details</string>
+    <string name="schedule_pickups">Scheduled Pickups</string>
+    <string name="all_set">ALL SET!</string>
+    <string name="visit_dashboard">Visit Dashboard</string>
+    <string name="select_category">Select Category</string>
+    <string name="pick_up_message">You e-waste will be collected by Zolopik E-Waste Recycling Trivendent Technologies Pvt. Ltd on 11/01/2022 at 07:30 am.</string>
+    <string name="confirmation_email">A confirmation mail has also been sent to your email address</string>
 </resources>

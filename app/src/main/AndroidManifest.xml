@@ -14,6 +14,20 @@
         android:theme="@style/Theme.CleanHarbours"
         tools:targetApi="31">
         <activity
+            android:name=".ui.confirmation.ConfirmationActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.pickups.PickUpsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ui.schedules_pickups.ScheduledPickUpActivity"
             android:exported="false">
             <meta-data

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.Menu
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.charts.PieChart
@@ -95,7 +96,10 @@ class DashboardActivity : AppCompatActivity() {
         //chart.setEntryLabelTypeface(tfRegular)
         chart.setEntryLabelTextSize(12f)
 
-        setData(3, 70F);
+        dashBoardViewModel.dashboardResponse.observe(this, Observer {
+            setData(it)
+        })
+
     }
 
     @Override
@@ -104,17 +108,22 @@ class DashboardActivity : AppCompatActivity() {
         return true
     }
 
-    private fun setData(count: Int, range: Float) {
+    private fun setData(dashBoardResponse: DashboardResponseModel) {
         val entries: ArrayList<PieEntry> = ArrayList()
-
+        var count = 1
+        if(dashBoardResponse.wasteData != null){
+            count = dashBoardResponse.wasteData.size
+        }
         // NOTE: The order of the entries when being added to the entries array determines their position around the center of
         // the chart.
         for (i in 0 until count) {
-            entries.add(
-                PieEntry(10F)
-            )
+            var entry = 1f
+            if(dashBoardResponse.wasteData?.get(i)?.itemsPickedUp != null) {
+                entry = dashBoardResponse.wasteData[i]?.itemsPickedUp?.toFloat()!!
+                entries.add(PieEntry(entry, dashBoardResponse.wasteData[i]?.type))
+            }
         }
-        val dataSet = PieDataSet(entries, "Election Results")
+        val dataSet = PieDataSet(entries, "Waste Dashboard")
         dataSet.setDrawIcons(false)
         dataSet.sliceSpace = 3f
         dataSet.iconsOffset = MPPointF(0F, 40F)
@@ -132,7 +141,7 @@ class DashboardActivity : AppCompatActivity() {
         //dataSet.setSelectionShift(0f);
         val data = PieData(dataSet)
         data.setValueFormatter(PercentFormatter())
-        data.setValueTextSize(16f)
+        data.setValueTextSize(20f)
         data.setValueTextColor(Color.BLACK)
         //data.setValueTypeface(tfLight)
         chart.data = data
